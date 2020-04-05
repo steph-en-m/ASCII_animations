@@ -1,0 +1,64 @@
+<!--ASCII Animation:
+Author:     Mugisha Stephen
+Reg_Number: 17/U/6337/PS
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ASCII Animation Viewer</title>
+    <link rel="stylesheet", href="./ascii.css", type="text/css">
+    <script type="text/javascript" src="./animations.js"></script>
+    <script type="text/javascript" src="./ascii.js"></script>
+</head>
+<body>
+    <div class="animation-container">
+        <h1>ASCII Animation Viewer</h1>
+        <!--animations are displayed in the text area of size:20 rows, 80cols-->
+        <textarea id="display" cols="80" rows="20"></textarea>
+
+        <div class="controls">
+            <!--Play controls fieldset-->
+            <fieldset>
+                <legend>Play Controls:</legend>
+                <input type="button", id="start", value="Start">
+                <input type="button", id="stop", value="Stop">
+            </fieldset>
+            <!--Animation fieldset-->
+            <fieldset>
+                <legend>Animation:</legend>
+                <select id="animations">
+                    <option value="Blank">Blank</option>
+                    <option value="Custom">Custom</option>
+                    <option value="Exercise">Exercise</option>
+                    <option value="Juggler">Juggler</option>
+                    <option value="Bike">Bike</option>
+                    <option value="Dive">Dive</option>
+                </select>
+            </fieldset>
+            <!--Size fieldset-->
+            <fieldset>
+                <legend>Size:</legend>
+                <select id="size">
+                    <option value="12pt">Medium</option>
+                    <option value="7pt">Tiny</option>
+                    <option value="10pt">Small</option>
+				    <option value="16pt">Large</option>
+				    <option value="24pt">Extra Large</option>
+                    <option value="32pt">XXL</option>
+                </select>
+            </fieldset>
+            <!--Speed fieldset-->
+            <fieldset>
+                <legend>Speed:</legend>
+                <input type="radio" id="turbo" name="speed">
+                <label for="turbo">Turbo</label>
+                <input type="radio", id="normal" name="speed" checked>
+                <label for="normal">Normal</label>
+                <input type="radio", id="slo-mo" name="speed">
+                <label for="slo-mo">Slo-Mo</label>
+            </fieldset>
+        </div>
+    </div>
+</body>
+</html>
