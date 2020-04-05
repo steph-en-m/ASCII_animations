@@ -5,7 +5,6 @@ Running ascii character animations in the browser.
 ### File-descriptions:
 
 /***
-BSE_1207
 | __File__    | __Description__ |
 | ascii.html | web page |
 | ascii.css | Stylesheet |
