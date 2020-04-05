@@ -4,7 +4,7 @@ Running ascii character animations in the browser.
 
 ### File-descriptions:
 
-/***
+
 | __File__    | __Description__ |
 |-------------|-----------------|
 | ascii.html  |        web page |
@@ -13,4 +13,4 @@ Running ascii character animations in the browser.
 | ascii.js    | Ascii dynamic behavior implementation |
 | myanimation.txt | Stage curtain opening ascii file | 
 | JS-Assignment.pdf | Assignment description |
-***/
+
