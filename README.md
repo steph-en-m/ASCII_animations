@@ -1,16 +1,12 @@
-## ASCII_animations
+## nodejs
 
-Running ascii character animations in the browser.
+My node.js projects.
 
 ### File-descriptions:
 
 
 | __File__    | __Description__ |
 |-------------|-----------------|
-| ascii.html  |        web page |
-| ascii.css   |      Stylesheet |
-| animations.js | ascii animation frames |
-| ascii.js    | Ascii dynamic behavior implementation |
-| myanimation.txt | Stage curtain opening ascii file | 
-| JS-Assignment.pdf | Assignment description |
+| ascii-animations  |        ascii animations in js |
+| todo   |      to-do list app in node.js |
 
