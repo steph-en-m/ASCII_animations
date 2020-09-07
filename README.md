@@ -1,6 +1,6 @@
-## nodejs
+## web_dev
 
-My node.js projects.
+My web app projects in js.
 
 ### File-descriptions:
 
