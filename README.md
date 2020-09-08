@@ -8,5 +8,4 @@ My web app projects in js.
 | __File__    | __Description__ |
 |-------------|-----------------|
 | ascii-animations  |        ascii animations in js |
-| todo   |      to-do list app in node.js |
 
