@@ -1,11 +1,49 @@
-// Setting up a simple server in nodejs
+//Express server.
 
-var http = require('http');
+var express = require('express');
+var app = express();
+
+app.get('/', function(req, res){
+    res.send('To-do list home page');
+});
+
+app.get('/about', function(req, res){
+    res.send('Call me maybe');
+});
+
+//passing route params
+app.get('/user/:id', function(req, res){
+    res.send('Viewing user ' + req.params.id);
+});
+
+app.listen(3000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Setting up a simple server in node.js
+
+/*var http = require('http');
 
 var server = http.createServer(function(req, res){
     res.writeHead(200, {'Content-Type': 'text/plain'});
     res.end('Hows quarantine');
 });
 
-server.listen(5000, '127.0.0.1');
-console.log('Now listening on port 5000');
+server.listen(6000, '127.0.0.1');
+console.log('Now listening on port 6000');
+*/
