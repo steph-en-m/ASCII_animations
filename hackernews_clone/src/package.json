@@ -1,0 +1,22 @@
+{
+  "name": "hackernews_clone",
+  "version": "1.0.0",
+  "description": "hacker news clonenp",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "graphql-yoga": "^1.18.3",
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "stephen",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https:github.com/steph-en-m/web-dev/"
+  }
+}
