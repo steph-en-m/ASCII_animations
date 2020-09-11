@@ -2,42 +2,41 @@
 
 const { GraphQLServer } = require('graphql-yoga')
 
-//Schema
-const typeDefs = `
-type Query {
-    info: String!
-    feed: [Link!]!
-}
-
-type Link {
-    id: ID!
-    description: String!
-    url: String!
-}
-`
-
 //dummy data
 let links = [{
     id: 'link-0',
     url: 'https://steph-en-m.github.io',
     description: 'My portfolio'
-}]
+},
+{
+    id: 'link-1',
+    url: 'https://steph-en-m.github.io',
+    description: 'My portfolio'
+},
+]
 
+let idCount = links.length
 //Resolvers
 const resolvers = {
     Query: {
         info: () => `Hacker News Clone.`,
         feed: () => links,
     },
-    Link: {
-        id: (parent) => parent.id,
-        description: (parent) => parent.description,
-        url: (parent) => parent.url,
-    }
+    Mutation: {
+        post: (parent, args) => {
+            const link = {
+                id: `link-${idCount++}`,
+                description: args.description,
+                url: args.url,
+            }
+            links.push(link)
+            return link
+        }
+    },
 }
 
 const server = new GraphQLServer({
-    typeDefs,
+    typeDefs:'./schema.graphql',
     resolvers,
 })
 server.start(() => console.log(`Server running on port 4000`))
