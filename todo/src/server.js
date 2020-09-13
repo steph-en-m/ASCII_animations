@@ -2,9 +2,10 @@
 
 var express = require('express');
 var app = express();
+app.set('view engine', 'ejs');
 
 app.get('/', function(req, res){
-    res.send('To-do list home page');
+    res.render('index');
 });
 
 app.get('/about', function(req, res){
