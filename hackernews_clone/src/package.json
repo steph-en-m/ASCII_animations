@@ -11,7 +11,9 @@
     "graphql-yoga": "^1.18.3",
     "nodemon": "^2.0.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@prisma/cli": "^2.6.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
