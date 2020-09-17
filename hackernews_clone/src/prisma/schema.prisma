@@ -1,0 +1,18 @@
+// db connection spec
+datasource db {
+    provider = "sqlite"
+    url      = "file:./dev.db"
+}
+
+// generate prisma client
+generator client {
+    provider = "prisma-client-js"
+}
+
+// Define data models (db table mappings)
+model Link {
+    id          Int      @id @default(autoincrement())
+    createdAt   DateTime @default(now())
+    description String
+    url         String
+}
