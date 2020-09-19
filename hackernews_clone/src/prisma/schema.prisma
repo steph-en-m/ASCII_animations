@@ -9,10 +9,19 @@ generator client {
     provider = "prisma-client-js"
 }
 
-// Define data models (db table mappings)
+model User {
+    id              Int @id @default(autoincrement())
+    name            String
+    email           @unique
+    password        
+    links           Link[]
+}
+
 model Link {
-    id          Int      @id @default(autoincrement())
-    createdAt   DateTime @default(now())
+    id          Int         @id @default(autoincrement())
+    createdAt   DateTime    @default(now())
     description String
     url         String
+    postedBy    User?       @relation(fields: [postedById], references: [id])
+    postedById  Int?
 }
