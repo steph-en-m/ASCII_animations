@@ -1,31 +1,28 @@
+const { GraphQLServer } = require('graphql-yoga')
 const { PrismaClient } = require("@prisma/client")
 const prisma = new PrismaClient()
 
-const server = new GraphQLServer({
-    typeDefs: "src/schema.graphql",
-    resolvers,
-    context: {
-        prisma,
-    }
-})
+const Query = require('./resolvers/Query')
+const Mutation = require('./resolvers/Mutation')
+const Link = require('./resolvers/Link')
+const User = require('./resolvers/User')
+
+
 
 const resolvers = {
-    Query: {
-        info: () => "Hackernews_clone_API",
-        feed: async (parent, args, context) => {
-            return context.prisma.link.findMany()
-        },
-    },
-
-    Mutation: {
-        post: (parent, args, context, info) => {
-            const newLink = context.prisma.link.create({
-                data: {
-                    url: args.url,
-                    description: args.description,
-                },
-            })
-            return newLink
-        },
-    },
+    Query,
+    Mutation,
+    User,
+    Link
 }
+
+const server = new GraphQLServer({
+    typeDefs: "./schema.graphql",
+    resolvers,
+    context: request => {
+        return {
+            ...request,
+            prisma,
+        }
+    },
+})
